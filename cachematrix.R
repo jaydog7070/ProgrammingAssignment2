@@ -1,11 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-## Write a short comment describing this function
-## Jason Stedl Nov 22 2014 
+## makeCacheMatrix Jason Stedl Nov 2014 
 ## Basic Function to store a matrix and its inverse using <<-
 ## Uses set to set matrix 
 ## Uses get to get matrix
+## Uses setinverse to set inverse
+## Uses getinverse to get invers
 ## inverse_glob is the global var for inverse of the given matrix
 makeCacheMatrix <- function(x = matrix()) {
   inverse_glob  <- NULL
@@ -24,14 +22,10 @@ makeCacheMatrix <- function(x = matrix()) {
   
 }
 
-
 ## cacheSolve Jason Stedl Nov 2014 
 ## basic function to calculate the inverse of  matrix using solve
 ## uses the matrix setter and getter function
-## 
-
-
-
+## returns the inverse if it exsists
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
   inverse <- x$getinverse()
